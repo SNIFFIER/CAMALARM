@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ANANDU DETECTION SYSTEM</title>
+  <link rel="stylesheet" href="3.css">
+</head>
+<body>
+  <h1>ANANDU MOTION TRACKER</h1>
+  <video id="video" autoplay muted></video>
+
+  <canvas id="motionCanvas" width="640" height="480"></canvas>
+
+  <div id="controls">
+    <button onclick="startMonitoring()">Start Monitoring</button>
+    <button onclick="stopMonitoring()">Stop Monitoring</button>
+    <button onclick="downloadLogs()">Download Logs</button>
+    <button onclick="toggleZoneDraw()">Toggle Motion Zone</button>
+  </div>
+
+  <div id="admin-panel">
+    <h2>Admin Panel</h2>
+    <label><input type="checkbox" id="toggleAlarm" checked> Enable Alarm</label><br>
+    <label><input type="checkbox" id="toggleLogs" checked> Enable Logs</label>
+  </div>
+
+  <div id="status">Status: Idle</div>
+
+  <audio id="alarmSound" src="Beep Sound Effect.mp3" loop></audio>
+
+  <div id="log">
+    <h2>Intrusion Log</h2>
+  </div>
+
+  <script src="2.js"></script>
+</body>
+
+</html>
